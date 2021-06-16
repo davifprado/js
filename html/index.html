@@ -18,5 +18,13 @@
         <br>
         Curso de Web Moderno
     </footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.onclick = function(e) {
+                e.preventDefault()
+                console.log('ação')
+            }
+        })
+    </script>
 </body>
 </html>
