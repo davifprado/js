@@ -11,7 +11,8 @@
         Exercícios HTML
     </header>
     <nav>
-        <a href="exercicios/teste.html"> 00 - Teste</a>
+        <a href wm-nav="exercicios/teste.html"> 00 - Teste</a>
+        <a href wm-nav="exercicios/temp.html"> temp</a>
     </nav>
     <section id="conteudo"></section>
     <footer>
@@ -19,10 +20,13 @@
         Curso de Web Moderno
     </footer>
     <script>
-        document.querySelectorAll('a').forEach(link => {
+        document.querySelectorAll('[wm-nav]').forEach(link => {
             link.onclick = function(e) {
                 e.preventDefault()
-                console.log('ação')
+                const conteudo = document.getElementById('conteudo')
+                fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
             }
         })
     </script>
