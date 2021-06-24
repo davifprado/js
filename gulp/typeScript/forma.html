@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: white;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        div:nth-child(1),
+        div:nth-child(2),
+        div:nth-child(3){
+            position: absolute;
+            width: 168px;
+            height: 168px;
+            border-radius: 200px;
+            background-color: rgba(247, 215, 148, 1);
+            border: 10px white solid; 
+            /* outline: 6px rgb(247, 215, 148) solid; */
+            box-shadow: 0px 0px 20px  rgb(247, 215, 148);
+        }
+        .topo {
+            top: 8%;
+            left: 46%
+        }
+        .esquerda {
+            top: 50%;
+            left: 33%
+        }
+        .direita {
+            top: 50%;
+            right: 31%
+        }
+        .fundo {
+            
+            position: absolute;
+            /* background-color: rgb(247, 215, 148); */
+            width: 460px;
+            height: 460px;
+            border-radius: 500px;
+            border: 20px  rgba(247, 215, 148, .7) solid;
+            top: 20%;
+            left: 38%;
+            z-index: -1;
+            box-shadow: 0px 0px 50px  rgb(247, 215, 148);
+        }
+    </style>
+</head>
+<body>
+    <div class="topo">
+        Nutrição
+    </div>
+    <div class="esquerda">
+        
+        Mentalidade
+    </div>
+    <div class="direita">
+        Coaching
+    </div>
+    <div class="fundo">
+        Nutrição Efetiva
+    </div>
+</body>
+</html>
